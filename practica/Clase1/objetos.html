@@ -1,0 +1,64 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conociendo Js: Objetos</title>
+
+</head>  
+<body>
+	<article>
+
+		<h1>Práctica Objetos</h1>
+		<blockquote>
+			<p>Recuerde hacer uso de la consola de desarrollador con F12</p>
+			<br>
+			<p>En este ejercicio, deberá agregar mas propiedades al objeto alojamiento para detallar sus características.</p>
+			<p>Modifique las propiedades del objeto en el código fuente y refresque para reflejar los cambios.</p>
+		</blockquote>
+		
+		<br>
+		<br>
+		<h2>Alojamiento:</h2>
+		
+		<!-- Mostrar la información de un alojamiento -->
+		<div id="informacion_alojamiento"></div>
+
+
+	</article>
+
+	<script type="text/javascript">
+
+		// Nuestro objeto alojamiento:
+		alojamiento = {
+			direccion: 'San Martin 510',
+			metros_cuadrados: 64,
+			cuartos: 1,
+			vista_al_mar: false,
+			servicios: [ 
+				'Aire acondicionado', 
+				'Elementos básicos',
+				'Calefacción',
+				'Agua caliente'
+			]
+		}
+
+		
+
+		// Dibujador de la informacion:
+		// Para el propósito del ejercicio, ignorar esta parte
+		let informacion = document.createElement("P");
+		let propiedades = Object.keys(alojamiento);
+		for (var i = 0; i <= propiedades.length - 1; i++) {
+			let t = document
+				.createTextNode(
+					`${propiedades[i]}: ${alojamiento[propiedades[i]]}`
+				);
+			let item = document.createElement("P");
+			item.appendChild(t);
+			informacion.appendChild(item);
+		}
+		document.getElementById("informacion_alojamiento").appendChild(informacion);
+	</script>
+</body>
+
+</html>
