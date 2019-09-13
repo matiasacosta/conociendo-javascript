@@ -3,6 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Conociendo Js: Objetos</title>
+  <script src="utiles.js"></script>
 
   <style type="text/css">
   	
@@ -33,7 +34,8 @@
 		<blockquote>
 			<p>Recuerde hacer uso de la consola de desarrollador con F12</p>
 			<br>
-			<p>En este ejercicio, deberá agregar mas propiedades al objeto alojamiento para detallar sus características.</p>
+			<p>En este ejercicio, deberá completar las propiedades del objeto alojamiento para detallar sus características y que se visualice como el alojamiento de la siguiente imagen.</p>
+			<img src="imgs/resultado_alojamiento_1.png" width="490" height="460">
 			<p>Modifique las propiedades del objeto en el código fuente y refresque para reflejar los cambios.</p>
 		</blockquote>
 		
@@ -58,57 +60,12 @@
 		// Nuestro objeto alojamiento:
 		alojamiento = {
 			direccion: 'San Martin 510',
-			metros_cuadrados: 64,
-			cuartos: 1,
-			vista_al_mar: false,
-			servicios: [ 
-				'Aire acondicionado', 
-				'Elementos básicos',
-				'Calefacción',
-				'Agua caliente'
-			],
-			//permite_perros: false
-			imagen: 'https://www.definicionabc.com/wp-content/uploads/2014/04/Alojamiento.jpg'
+			imagen: 'https://www.definicionabc.com/wp-content/uploads/2014/04/Alojamiento.jpg',
 		}
-
 		
-
 		// Dibujador de la informacion:
-		// Para el propósito del ejercicio, ignorar esta parte
-		let informacion = document.createElement("div");
-		let propiedades = Object.keys(alojamiento);
-		for (var i = 0; i <= propiedades.length - 1; i++) {
-			if (propiedades[i] == 'imagen') {
-				let img = document.createElement("IMG");
-				img.src = alojamiento[propiedades[i]];
-				img.width=150;
-				img.height=120;
-				informacion.appendChild(img);
-
-			} else {
-				let text_item_title = document
-					.createTextNode(
-						`${propiedades[i][0].toUpperCase()}${propiedades[i].slice(1).replace('_', ' ')}: `
-					);
-				let text_item_value = document
-					.createTextNode(
-						`${alojamiento[propiedades[i]]}`
-					);
-				
-				let item_title = document.createElement("span");
-				item_title.className = 'item-title';
-				item_title.appendChild(text_item_title);
-				
-				let item = document.createElement("P");
-				item.appendChild(item_title);
-				item.appendChild(text_item_value);
-				informacion.appendChild(item);
-			}
-
-			informacion.className = "info";
-			document.getElementById("informacion_alojamiento").appendChild(informacion);
-
-			}
+		// Para el propósito del ejercicio, se puede ignorar esta funcion:
+		cargar_alojamiento()
 
 	</script>
 </body>
