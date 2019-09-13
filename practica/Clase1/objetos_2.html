@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conociendo Js: Objetos</title>
+  <script src="js/utiles.js"></script>
+  <link rel="stylesheet" href="css/estilos_2.css">
+
+</head>  
+<body>
+	<article>
+
+		<h1>Práctica Objetos N° 2</h1>
+		<blockquote>
+			<p>Recuerde hacer uso de la consola de desarrollador con F12</p>
+			<br>
+			<p>En este ejercicio, deberá generar objetos alojamiento con sus propiedades completas para que se listen como los alojamientos de la siguiente imagen.</p>
+			<img src="imgs/resultado_alojamientos.png" width="960" height="460">
+			<p>Modifique las propiedades de los objetos en el código fuente, genere mas alojamientos y refresque para reflejar los cambios.</p>
+		</blockquote>
+		
+		<br>
+		<br>
+
+
+	</article>
+
+	<div class="contenido">
+		
+		<h2>Alojamientos:</h2>
+		
+		<!-- Mostrar la información de un alojamiento -->
+		<div id="informacion_alojamiento"></div>
+
+	</div>
+	
+
+	<script type="text/javascript">
+
+		// Nuestros objetos alojamiento:
+		alojamiento_1 = {
+			imagen: 'https://www.definicionabc.com/wp-content/uploads/2014/04/Alojamiento.jpg',
+		}
+		alojamiento_2 = {
+			imagen: 'https://www.montehermosohoy.com/wp-content/uploads/2018/01/alojamiento-hospedaje-monte-hermoso-800x350.jpg',
+		}
+
+		// alojamientos:
+		let alojamientos = [alojamiento_1, alojamiento_2];
+		
+		// Dibujador de la informacion:
+		// Para el propósito del ejercicio, se puede ignorar esta funcion:
+		cargar_alojamientos(alojamientos)
+
+	</script>
+</body>
+
+</html>

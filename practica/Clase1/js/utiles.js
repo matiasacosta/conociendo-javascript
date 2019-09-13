@@ -1,13 +1,13 @@
-function cargar_alojamiento() {
+function cargar_alojamiento(alojamiento_i) {
 	// body...
 	// Dibujador de la informacion:
 	// Para el propósito del ejercicio, ignorar esta parte
 	let informacion = document.createElement("div");
-	let propiedades = Object.keys(alojamiento);
+	let propiedades = Object.keys(alojamiento_i);
 	for (var i = 0; i <= propiedades.length - 1; i++) {
 		if (propiedades[i] == 'imagen') {
 			let img = document.createElement("IMG");
-			img.src = alojamiento[propiedades[i]];
+			img.src = alojamiento_i[propiedades[i]];
 			img.width=150;
 			img.height=120;
 			informacion.appendChild(img);
@@ -19,7 +19,7 @@ function cargar_alojamiento() {
 				);
 			let text_item_value = document
 				.createTextNode(
-					`${alojamiento[propiedades[i]]}`
+					`${alojamiento_i[propiedades[i]]}`
 				);
 			
 			let item_title = document.createElement("span");
@@ -32,9 +32,19 @@ function cargar_alojamiento() {
 			informacion.appendChild(item);
 		}
 
-		informacion.className = "info";
+		informacion.className = "info-list-item";
 		document.getElementById("informacion_alojamiento").appendChild(informacion);
 
+	}
+
+}
+
+// Práctica 2:
+function cargar_alojamientos(alojamientos) {
+	// Dibujador de la informacion:
+	// Para el propósito del ejercicio, ignorar esta parte
+	for (var i = 0; i < alojamientos.length; i++) {
+		cargar_alojamiento(alojamientos[i]);
 	}
 
 }
