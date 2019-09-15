@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <h1 class="title">Lista de tareas</h1>
+
+    <div class="create-task-container">
+        <div>
+            <h3>Nueva tarea</h3>
+            <form>
+                Título:<br>
+                <input type="text" name="titulo"><br>
+                Descripción:<br>
+                <input type="text" name="descripcion" maxlength="140"><br>
+                Fecha:<br>
+                <input type="date" name="fecha" min="2019-09-19">
+            </form>
+            <br>
+            <button id="cargar-tarea">Agregar</button>
+        </div>
+    </div>  
+    <div class="flex-container">
+        <div class="task-container" style="background-color: #fff172; flex-grow: 1;">
+            <h2>Hoy</h2>
+            <div class="task-info">
+                <h4>Tarea A</h4>
+                <p>Esta tarea tiene descripcion</p>
+                <p>21/09/2019 14:30</p>
+                
+            </div>
+        </div>
+        <div class="task-container" style="background-color: #c6b83b; flex-grow: 1;">
+            <h2>Mañana</h2>
+            <div class="task-info">
+                <h4>Tarea B</h4>
+                <p>22/09/2019 14:30</p>
+            </div>
+            <div class="task-info">
+                <h4>Tarea C</h4>
+                <p>Esta tarea tiene descripcion</p>
+                <p>22/09/2019 14:30</p>
+            </div>
+            
+        </div>
+        <div class="task-container" style="background-color:#716819; flex-grow: 8;">
+            <h2 style="color:#fff7b1;">Más tarde</h2>
+            <div class="task-info">
+                <h4>Tarea D</h4>
+                <p>24/09/2019 14:30</p>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
