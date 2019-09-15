@@ -7,55 +7,83 @@
 
 <body>
 
-    <h1 class="title">Lista de tareas</h1>
+    <div class="main">
+        
+        <h1 class="title">Lista de tareas</h1>
 
-    <div class="create-task-container">
-        <div>
-            <h3>Nueva tarea</h3>
-            <form>
-                Título:<br>
-                <input type="text" name="titulo"><br>
-                Descripción:<br>
-                <input type="text" name="descripcion" maxlength="140"><br>
-                Fecha:<br>
-                <input type="date" name="fecha" min="2019-09-19">
-            </form>
-            <br>
-            <button id="cargar-tarea">Agregar</button>
-        </div>
-    </div>  
-    <div class="flex-container">
-        <div class="task-container" style="background-color: #fff172; flex-grow: 1;">
-            <h2>Hoy</h2>
-            <div class="task-info">
-                <h4>Tarea A</h4>
-                <p>Esta tarea tiene descripcion</p>
-                <p>21/09/2019 14:30</p>
+        <div class="create-task-container">
+            <div>
+                <h3>Nueva tarea</h3>
+                <form action="index.html">
+                    <div class="form-item">
+                        Título:<br>
+                        <input type="text" name="titulo"><br>
+                    </div>
+                    <div class="form-item">
+                        Descripción:<br>
+                        <textarea rows = "3" cols = "23" name = "descripcion">
+                        </textarea><br>
+                    </div>
+                    <div class="form-item">
+                        Fecha:<br>
+                        <input type="date" name="fecha" min="2019-09-19"><br>
+                    </div>
+                    <div class="form-item">
+                        Hora:<br>
+                        <input type="time" name="hora" min="06:00" max="23:55"><br>
+                    </div>
+                    <button id="cargar-tarea" type="submit">Agregar</button>
+                </form>
+                <br>
+            </div>
+        </div>  
+        <div class="flex-container">
+            <div class="task-container" style="background-color: #fff172; flex-grow: 1;">
+                <h2>Hoy</h2>
+                <div class="task-info">
+                    <h4>Tarea A</h4>
+                    <p>Esta tarea tiene descripcion</p>
+                    <p>21/09/2019 14:30</p>
+                    
+                </div>
+            </div>
+            <div class="task-container" style="background-color: #c6b83b; flex-grow: 1;">
+                <h2>Mañana</h2>
+                <div class="task-info">
+                    <h4>Tarea B</h4>
+                    <p>22/09/2019 14:30</p>
+                </div>
+                <div class="task-info">
+                    <h4>Tarea C</h4>
+                    <p>Esta tarea tiene descripcion</p>
+                    <p>22/09/2019 14:30</p>
+                </div>
                 
             </div>
-        </div>
-        <div class="task-container" style="background-color: #c6b83b; flex-grow: 1;">
-            <h2>Mañana</h2>
-            <div class="task-info">
-                <h4>Tarea B</h4>
-                <p>22/09/2019 14:30</p>
-            </div>
-            <div class="task-info">
-                <h4>Tarea C</h4>
-                <p>Esta tarea tiene descripcion</p>
-                <p>22/09/2019 14:30</p>
-            </div>
-            
-        </div>
-        <div class="task-container" style="background-color:#716819; flex-grow: 8;">
-            <h2 style="color:#fff7b1;">Más tarde</h2>
-            <div class="task-info">
-                <h4>Tarea D</h4>
-                <p>24/09/2019 14:30</p>
-                
+            <div class="task-container" style="background-color:#716819; flex-grow: 8;">
+                <h2 style="color:#fff7b1;">Más tarde</h2>
+                <div class="task-info">
+                    <h4>Tarea D</h4>
+                    <p>24/09/2019 14:30</p>
+                    
+                </div>
             </div>
         </div>
-    </div>
+
+    </div> <!-- fin main -->
+
+    <script>
+        let form = document.querySelector("form");
+        form.addEventListener(
+            "submit",
+            event => {
+                console.log("Valor titulo del formulario: ", form.elements.titulo.value);
+                console.log("Valor fecha del formulario: ", form.elements.fecha.value);
+                console.log("Valor fecha del formulario (tipo):", typeof(form.elements.titulo.value));
+                event.preventDefault();
+            });
+
+    </script>
 
 </body>
 </html>

@@ -57,18 +57,32 @@ body{
   color: white;
 }
 
-.create-task-container>div>button {
+.create-task-container button {
 	width: 100px;
 	height: 41px;
 	border-radius: 5px;
 	background-color: #fff;
 	font-size: 18px;
 	color:#4f4f4f;
+	margin-top: 5%;
 
 }
 
 .title{
 	color:#4f4f4f; 
 	text-align: center;
-	margin-top: 5%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main>*{
+  margin-bottom: 4%;
+}
+
+form .form-item{
+	padding: 1%;
+    margin-bottom: 2%;
 }
