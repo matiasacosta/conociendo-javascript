@@ -36,9 +36,10 @@
                 </form>
                 <br>
             </div>
-        </div>  
+        </div>
+
         <div class="flex-container">
-            <div class="task-container" style="background-color: #fff172; flex-grow: 1;">
+            <div class="task-container" id="task-container-01" style="background-color: #fff172; flex-grow: 1;">
                 <h2>Hoy</h2>
                 <div class="task-info">
                     <h4>Tarea A</h4>
@@ -46,6 +47,7 @@
                     <p>21/09/2019 14:30</p>
                     
                 </div>
+                <div id="task-container-01-fin"></div>
             </div>
             <div class="task-container" style="background-color: #c6b83b; flex-grow: 1;">
                 <h2>Mañana</h2>
@@ -71,19 +73,8 @@
         </div>
 
     </div> <!-- fin main -->
-
-    <script>
-        let form = document.querySelector("form");
-        form.addEventListener(
-            "submit",
-            event => {
-                console.log("Valor titulo del formulario: ", form.elements.titulo.value);
-                console.log("Valor fecha del formulario: ", form.elements.fecha.value);
-                console.log("Valor fecha del formulario (tipo):", typeof(form.elements.titulo.value));
-                event.preventDefault();
-            });
-
-    </script>
-
+    
+    <script src="js/main.js"></script>
+ 
 </body>
 </html>
