@@ -1,0 +1,31 @@
+body{
+	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+.contenido{
+	margin: 10px;
+    background: #c4e8f7;
+    border-color: beige;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item {
+    margin: 2%;
+}
+
+.item-title{
+  background: #0a6f7c7a;
+  color: antiquewhite;
+  padding: 1%;
+  margin-right: 1%;
+  width: 95%;
+}
+
+.info-list-item{
+    border-style: solid;
+    border-width: medium;
+    border-color: #206daa;
+    margin: 1%;
+    padding: 1%;
+}

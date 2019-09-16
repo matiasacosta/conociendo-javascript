@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conociendo Js: Objetos</title>
+  <script src="js/objetos_3.js"></script>
+  <link rel="stylesheet" href="css/estilos_3.css">
+
+</head>  
+<body>
+	<article>
+
+		<h1>Práctica Objetos N° 3</h1>
+		<blockquote>
+			<p>Recuerde hacer uso de la consola de desarrollador con F12</p>
+			<br>
+			<p>En este ejercicio, deberá modelar objetos que representen una tarea. En la consola:</p>
+			<ul>
+				<li>Genere un objeto tarea con las propiedades que considere necesarias.</li>
+				<li>Agregue la tarea a un listado de tareas</li>
+				<li>Invoque a la función dibujar_tareas(listado_de_tareas)</li>
+			</ul>
+		</blockquote>
+		
+		<br>
+		<br>
+
+
+	</article>
+
+	<div class="contenido">
+		
+		<h2>Tareas:</h2>
+		
+		<!-- Mostrar tareas pendientes -->
+		<div id="listado-tareas"></div>
+
+	</div>
+	
+
+	<script type="text/javascript">
+
+		// Una tarea:
+		tarea_1 = {
+			titulo: 'Programar en JS',
+		}
+
+		// tareas:
+		let tareas = [tarea_1];
+		
+		// Dibujador de la informacion:
+		// Para el propósito del ejercicio, se puede ignorar esta funcion:
+		dibujar_tareas(tareas)
+
+	</script>
+  	
+</body>
+
+</html>
