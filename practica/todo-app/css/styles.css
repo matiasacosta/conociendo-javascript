@@ -1,12 +1,12 @@
 * {
-  	box-sizing: border-box;
-  	font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  box-sizing: border-box;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif !important;
 }
 
-body{
-	background-color: #f7e01826;
-	color:#4d4a4a;
-
+body {
+  background-color: #f7e01826;
+  color: #4d4a4a;
 }
 .flex-container {
   display: flex;
@@ -29,26 +29,29 @@ body{
   flex-direction: column;
 }
 
-.task-info{
-	background-color: white;
-	border-radius: 5px;
-	margin: 3% 2%;
-	padding: 20px 10px 20px 10px;
+.task-info {
+  background-color: white;
+  border-radius: 5px;
+  margin: 3% 2%;
+  padding: 20px 10px 20px 10px;
+  transition: box-shadow 0.5s, background-color 0.5s;
+}
+
+.task-info:hover {
+  background-color: orange;
+  box-shadow: 0px 15px 2px 0px rgba(0, 0, 0, 0.75);
 }
 
 .create-task-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px;
-  /*background-color: #f7e018;*/
 }
 
-.create-task-container>div {
+.create-task-container > div {
   display: flex;
   background-color: #4f4f4f;
-  width: 40%;
+  min-width: 40%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -58,19 +61,23 @@ body{
 }
 
 .create-task-container button {
-	width: 100px;
-	height: 41px;
-	border-radius: 5px;
-	background-color: #fff;
-	font-size: 18px;
-	color:#4f4f4f;
-	margin-top: 5%;
-
+  width: 100px;
+  height: 41px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 18px;
+  color: #4f4f4f;
+  margin-top: 5%;
 }
 
-.title{
-	color:#4f4f4f; 
-	text-align: center;
+form .form-item {
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+.title {
+  color: #4f4f4f;
+  text-align: center;
 }
 
 .main {
@@ -78,11 +85,6 @@ body{
   flex-direction: column;
 }
 
-.main>*{
+.main > * {
   margin-bottom: 4%;
-}
-
-form .form-item{
-	padding: 1%;
-    margin-bottom: 2%;
 }
