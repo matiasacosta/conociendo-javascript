@@ -39,7 +39,9 @@ function agregar_tarea_hoy(tarea) {
     div.innerHTML = `
     <h4>${tarea.titulo}</h4>
     <p>${tarea.descripcion}</p>
-    <p>${tarea.fecha} ${tarea.hora}</p>`;
+    <p>${tarea.fecha} ${tarea.hora}</p>
+    <input type="radio"> Completado? </input>
+    `;
     
     // con la clase info:
     div.className = 'task-info';
@@ -49,4 +51,13 @@ function agregar_tarea_hoy(tarea) {
 
     // Para que vaya insertando arriba tipo pila
     target.parentNode.insertBefore( div, target.nextSibling );
+}
+
+const nav = document.querySelector('.nav');
+nav.addEventListener('click',(event) => {
+    nav.classList.toggle('open');
+});
+
+function toggleCompletados() {
+    document.getElementById("todos-completados").classList.toggle('active');
 }
