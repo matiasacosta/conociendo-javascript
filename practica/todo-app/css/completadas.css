@@ -3,7 +3,7 @@
   width: 300px;
   margin-left: 20%;
   position: fixed;
-  top: 8px;
+  top: 0px;
   right: -303px;
   transition: all 500ms linear;
   color: white;
@@ -47,7 +47,7 @@
   border-style: none;
   outline: none;
   cursor: pointer;
-  margin-top: 4px;
+  margin-top: 3%;
 }
 
 .nav span {
