@@ -39,6 +39,26 @@
     </p>
     <script>
         // Ingrese su codigo JavaScript aquí.
+        renglones = 10;
+        for (let i = renglones; i >= 0; i--) {
+            renglon_texto = "";
+            if (i % 2 == 1) {
+                arranque = ' ';
+                siguiente = '#';
+            }else{
+                arranque = '#';
+                siguiente = ' ';
+            }
+
+            for (let j = renglones; j > 0; j--) {
+                if (j % 2 == 1) {
+                    renglon_texto += arranque;
+                }else{
+                    renglon_texto += siguiente;
+                }
+            }
+            console.log(renglon_texto);
+        }
     </script>
 </body>
 </html>
