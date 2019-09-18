@@ -15,4 +15,10 @@ class Tarea {
     <p>${this.descripcion || ""}</p>
     <p>${this.fecha} ${this.hora || "00:00:00"}</p>`;
   }
+
+  getHTML_completada() {
+    return `
+    <h3>${this.titulo}</h3>
+    <h5>${this.descripcion || ""}</h5>`;
+  }
 }

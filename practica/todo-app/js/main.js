@@ -1,9 +1,9 @@
 const tareas = [
-  new Tarea("La tarea de hoy", "Una descripción", "2019/09/17"),
-  new Tarea("La tarea de mañana", "Una descripción", "2019/09/18"),
-  new Tarea("Otra tarea de mañana", "Una descripción", "2019/09/18"),
-  new Tarea("Una tarea para hacer más tarde", "Una descripción", "2019/09/19"),
-  new Tarea("Una tarea para hacer más tarde", "Una descripción", "2019/09/21")
+  new Tarea("Programar en JS", "Realizar la práctica 2", "2019/09/18", '15:00'),
+  new Tarea("Continuar programando en JS", "Realizar la práctica 3", "2019/09/19", '16:30'),
+  new Tarea("Ir al supermercado", "Lista de compras", "2019/09/19", "9:00"),
+  new Tarea("Día de la primavera", "---", "2019/09/21"),
+  new Tarea("Una tarea para hacer más tarde", "Su correspondiente descripción", "2019/09/23")
 ];
 
 window.onload = init;
@@ -76,6 +76,6 @@ function agregar_tarea_completada(tarea) {
     "#todos-completados .content ul"
   );
   const nueva_tarea_completada = document.createElement("li");
-  nueva_tarea_completada.innerHTML = tarea.titulo;
+  nueva_tarea_completada.innerHTML = tarea.getHTML_completada();
   tareas_completadas_list.appendChild(nueva_tarea_completada);
 }
