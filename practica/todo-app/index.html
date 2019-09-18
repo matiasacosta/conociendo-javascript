@@ -3,10 +3,11 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/completadas.css" />
   </head>
 
   <body>
-    <div class="main">
+    <main>
       <h1 class="title">Lista de tareas</h1>
 
       <div class="create-task-container">
@@ -71,26 +72,20 @@
           <div id="tasks-mas-tarde"></div>
         </div>
       </div>
+    </main>
+
+    <div id="todos-completados">
+      <button class="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="content">
+        <h2>Tareas completadas</h2>
+        <ul></ul>
+      </div>
     </div>
-    <!-- fin main -->
 
-        <div id="todos-completados">
-            <button class="nav" onclick="toggleCompletados()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <!-- <button>X</button> -->
-            <h2> Tareas completadas</h2>
-            <ul>
-                <li>Tarea A</li>
-                <li>Tarea B</li>
-                <li>Tarea C</li>
-            </ul>
-        </div>
-
-    </div> <!-- fin main -->
-    
     <script src="js/Tarea.js"></script>
     <script src="js/fechas.js"></script>
     <script src="js/init.js"></script>

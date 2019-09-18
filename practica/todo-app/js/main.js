@@ -61,14 +61,21 @@ function crear_div_tarea(tarea) {
   div.className = "task-info";
   // Rellenamos el contenido:
   div.innerHTML = tarea.getHTML();
+  div.onclick = event => {
+    if (!div.classList.contains("strikethrough")) {
+      div.classList.add("strikethrough");
+      agregar_tarea_completada(tarea);
+    }
+  };
   return div;
 }
 
-const nav = document.querySelector(".nav");
-nav.addEventListener("click", event => {
-  nav.classList.toggle("open");
-});
-
-function toggleCompletados() {
-  document.getElementById("todos-completados").classList.toggle("active");
+function agregar_tarea_completada(tarea) {
+  // Esto también lo podrían hacer los alumnos, para la última clase (eventos)
+  const tareas_completadas_list = document.querySelector(
+    "#todos-completados .content ul"
+  );
+  const nueva_tarea_completada = document.createElement("li");
+  nueva_tarea_completada.innerHTML = tarea.titulo;
+  tareas_completadas_list.appendChild(nueva_tarea_completada);
 }

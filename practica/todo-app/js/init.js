@@ -1,9 +1,17 @@
 function init() {
   const form = document.querySelector("form");
   form.addEventListener("submit", onFormSubmit);
+  const nav = document.querySelector(".nav");
+  nav.addEventListener("click", onToggleCompletados);
+
   cargar_tareas_hoy(tareas);
   cargar_tareas_maniana(tareas);
   cargar_tareas_mas_tarde(tareas);
+}
+
+function onToggleCompletados() {
+  document.getElementById("todos-completados").classList.toggle("active");
+  this.classList.toggle("open");
 }
 
 function onFormSubmit(event) {
